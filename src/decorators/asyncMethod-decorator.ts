@@ -5,7 +5,7 @@ function Controller1(endPoint: string) {
         constructor.prototype.endPoint = endPoint;
         // Login -> with 3 seconds delay (async method)
         constructor.prototype.loginFromController = async () => {
-            await new Promise(r => setTimeout(r, 3000)); // delay 3 seconds
+            await new Promise(resolve => setTimeout(resolve, 3000)); // delay 3 seconds
             console.log("You logged in from controller decorator");
         }
     }
